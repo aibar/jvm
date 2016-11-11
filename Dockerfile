@@ -3,7 +3,7 @@ FROM walkingdevs/glibc
 ENV JAVA_HOME=/jvm
 
 RUN wget http://dl.bintray.com/aibar/generic/jdk-8.102.tar.gz -O jdk.tar.gz && \
-    tar xzfv jdk.tar.gz && \
+    tar xzf jdk.tar.gz && \
     rm jdk.tar.gz && \
     mv jdk1.8.0_102 fat-jdk && \
 
@@ -57,15 +57,15 @@ RUN wget http://dl.bintray.com/aibar/generic/jdk-8.102.tar.gz -O jdk.tar.gz && \
     #
     # Executables
     #
-    cp fat-jdk/jre/bin/java /jvm/jre/bin && \
-    cp fat-jdk/bin/java \
-       fat-jdk/bin/javac /jvm/bin && \
+    cp /fat-jdk/jre/bin/java /jvm/jre/bin && \
+    cp /fat-jdk/bin/java \
+       /fat-jdk/bin/javac /jvm/bin && \
 
     #
     # Jdk libs
     #
-    cp fat-jdk/lib/tools.jar /jvm/lib && \
-    cp fat-jdk/lib/amd64/jli/libjli.so /jvm/lib/amd64/jli && \
+    cp /fat-jdk/lib/tools.jar /jvm/lib && \
+    cp /fat-jdk/lib/amd64/jli/libjli.so /jvm/lib/amd64/jli && \
 
     ln -s /jvm/bin/java /bin/java && \
     ln -s /jvm/bin/javac /bin/javac && \
