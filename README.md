@@ -1,3 +1,3 @@
-## Minimal and Clean JVM (Runtime + compiler)
+## Minimal and Clean JVM Docker Image (Runtime + compiler)
 
-    FROM aibar/jvm:1.8
+    FROM walkingdevs/jvm:1.8
