@@ -28,6 +28,7 @@ RUN wget http://dl.bintray.com/aibar/generic/jdk-8.102.tar.gz -O jdk.tar.gz && \
        tzdb.dat \
        jsse.jar \
        jce.jar \
+       content-types.properties \
        resources.jar /jvm/jre/lib && \
 
     cp amd64/jvm.cfg \
