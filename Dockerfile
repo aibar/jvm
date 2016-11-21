@@ -39,6 +39,7 @@ RUN wget http://dl.bintray.com/aibar/generic/jdk-8.102.tar.gz -O jdk.tar.gz && \
        amd64/libmanagement.so \
        amd64/libnet.so \
        amd64/libnio.so \
+       amd64/libattach.so \
        amd64/libresource.so /jvm/jre/lib/amd64 && \
 
     cp amd64/server/libjvm.so /jvm/jre/lib/amd64/server && \
